@@ -13,6 +13,7 @@ module.exports = {
   schema: true,
 
   attributes: {
+
     email: {
       type: 'string',
       unique: true,
@@ -41,7 +42,7 @@ module.exports = {
         .exec(function(err, freeunits) {
 
           var local = 0;
-          async.forEach(freeunits, 
+          async.forEach(freeunits,
             function(freeunit, callback) {
 
               if(freeunit.assignment != null)
